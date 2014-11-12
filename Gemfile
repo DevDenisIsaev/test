@@ -17,3 +17,7 @@ gem 'jquery-rails'
 group :databases do
   gem 'pg'
 end
+
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'unicorn'
