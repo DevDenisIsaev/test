@@ -1,0 +1,19 @@
+= form_for(@user) do |f|
+
+  %div
+    = f.label :name, t(:name, scope: [:forms])
+    = f.text_field :name
+  %div
+    = f.label :email, t(:email, scope: [:forms])
+    = f.text_field :email
+  %div
+    = f.label :password, t(:password, scope: [:forms])
+    = f.password_field :password
+  %div
+    = f.label :password_confirmation, t(:password_confirmation, scope: [:forms])
+    = f.password_field :password_confirmation
+  %div
+  = f.submit t(:create_user, scope: [:forms])
+
+= link_to t(:back_link, scope: [:links]), users_path
+

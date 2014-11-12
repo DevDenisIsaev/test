@@ -1,0 +1,12 @@
+.row
+  .span6.offset3
+    %h1
+      Войти
+.row
+  .span6.offset3
+    = form_for(:session, url: sessions_path) do |f|
+      = f.label "Почта"
+      = f.text_field :email
+      = f.label "Пароль"
+      = f.password_field :password
+      = f.submit "Войти", class: "btn btn-large btn-primary", style: "display: block;"

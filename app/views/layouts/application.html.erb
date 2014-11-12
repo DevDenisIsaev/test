@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project</title>
+  <title>Admin</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header class="navbar navbar-fixed-top navbar-inverse" style="position: static;">
+  <div class="navbar-inner">
+    <div class="container">
+      <nav>
+        <ul class="nav pull-right">
+          <% if signed_in? %>
+              <% if admin_user? %>
+                <li><%= link_to "Пользователи", users_path %></li>
+              <% end %>
+              <li><%= link_to "Данные", data_path %></li>
+              <li><%= link_to "Выйти", signout_path %></li>
+          <% else %>
+              <li><%= link_to "Войти", signin_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 
 <%= yield %>
 

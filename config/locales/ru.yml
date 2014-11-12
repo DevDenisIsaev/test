@@ -1,0 +1,11 @@
+ru:
+  direction: "Направление"
+  caller_id_name: "ID имени абонента"
+  caller_id_number: "ID номера абонента"
+  destination_number: "Номер назначения"
+  start_stamp: "Время начала"
+  end_stamp: "Время конца"
+  duration: "Продолжительность"
+  read_codec: "Кодек"
+  read_rate: "Скорость"
+  hangup_cause: "Причина зависания"

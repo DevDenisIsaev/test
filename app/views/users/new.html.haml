@@ -1,0 +1,18 @@
+.row
+  .span12.offset3
+    = form_for(@user) do |f|
+
+      %div
+        = f.label :name, "Имя"
+        = f.text_field :name
+      %div
+        = f.label :email, "Почта"
+        = f.text_field :email
+      %div
+        = f.label :password, "Пароль"
+        = f.password_field :password
+      %div
+        = f.label :password_confirmation, "Подтверждение пароля"
+        = f.password_field :password_confirmation
+      %div
+      = f.submit "Создать"

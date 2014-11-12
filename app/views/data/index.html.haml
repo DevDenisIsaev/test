@@ -1,0 +1,46 @@
+database.yml.row
+  .span12.offset3
+    %table
+      %tr
+        %td
+          = t :direction
+        %td
+          = t :caller_id_name
+        %td
+          = t :caller_id_number
+        %td
+          = t :destination_number
+        %td
+          = t :start_stamp
+        %td
+          = t :end_stamp
+        %td
+          = t :duration
+        %td
+          = t :read_codec
+        %td
+          = t :read_rate
+        %td
+          = t :hangup_cause
+      - @result.each do |row|
+        %tr
+          %td
+            = row["direction"]
+          %td
+            = row["caller_id_name"]
+          %td
+            = row["caller_id_number"]
+          %td
+            = row["destination_number"]
+          %td
+            = row["start_stamp"]
+          %td
+            = row["end_stamp"]
+          %td
+            = row["duration"]
+          %td
+            = row["read_codec"]
+          %td
+            = row["read_rate"]
+          %td
+            = row["hangup_cause"]
