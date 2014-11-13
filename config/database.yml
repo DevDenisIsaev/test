@@ -1,23 +1,29 @@
 development:
   adapter: postgresql
-  database: admin_panel
+  database: denisisa_admin41
   pool: 5
   timeout: 5000
-  username: admin
+  username: denisisa_admin41
   password: admin
-  host: localhost
+  host: postgresql2.locum.ru
 
 test:
-  adapter: sqlite3
-  database: admin_panel
+  adapter: postgresql
+  database: denisisa_admin41
   pool: 5
   timeout: 5000
+  username: denisisa_admin41
+  password: admin
+  host: postgresql2.locum.ru
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: denisisa_admin41
   pool: 5
   timeout: 5000
+  username: denisisa_admin41
+  password: admin
+  host: postgresql2.locum.ru
 
 remote_db:
   adapter: postgresql
