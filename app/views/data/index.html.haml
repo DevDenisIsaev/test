@@ -1,27 +1,27 @@
 .row
   .span12.offset3
-    %table
-      %tr
+    %table.data-table
+      %tr.header
         %td
-          = t :direction
+          = link_to (t :direction), "/data?field=direction"
         %td
-          = t :caller_id_name
+          = link_to (t :caller_id_name), "/data?field=caller_id_name"
         %td
-          = t :caller_id_number
+          = link_to (t :caller_id_number), "/data?field=caller_id_number"
         %td
-          = t :destination_number
+          = link_to (t :destination_number), "/data?field=destination_number"
+        %td.w140
+          = link_to (t :start_stamp), "/data?field=start_stamp"
+        %td.w140
+          = link_to (t :end_stamp), "/data?field=end_stamp"
         %td
-          = t :start_stamp
+          = link_to (t :duration), "/data?field=duration"
         %td
-          = t :end_stamp
+          = link_to (t :read_codec), "/data?field=read_codec"
         %td
-          = t :duration
+          = link_to (t :read_rate), "/data?field=read_rate"
         %td
-          = t :read_codec
-        %td
-          = t :read_rate
-        %td
-          = t :hangup_cause
+          = link_to (t :hangup_cause), "/data?field=hangup_cause"
       - @result.each do |row|
         %tr
           %td
